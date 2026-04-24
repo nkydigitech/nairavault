@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#0A1628" />
+  <title>NairaVault Bank</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="src/css/style.css" />
+</head>
+<body>
+  <div class="app" id="app">
+
+    <!-- ── LOGIN ── -->
+    <div id="s-login" class="screen active">
+      <div class="login-top">
+        <div class="bank-logo-wrap">
+          <div class="bank-logo-icon">
+            <svg viewBox="0 0 32 32" fill="none">
+              <rect x="4" y="10" width="24" height="18" rx="3" stroke="#fff" stroke-width="2.2"/>
+              <path d="M10 10V7a6 6 0 0112 0v3" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+              <circle cx="16" cy="19" r="3" stroke="#fff" stroke-width="2.2"/>
+              <path d="M16 22v3" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="bank-wordmark">
+            <div class="bank-name">NairaVault</div>
+            <div class="bank-tagline">Commercial Bank</div>
+          </div>
+        </div>
+        <h1 class="login-headline">Secure.<br>Trusted.<br><span>Always.</span></h1>
+        <p class="login-sub">Nigeria's most secure digital bank. Your wealth, protected.</p>
+        <div class="security-strip">
+          <svg viewBox="0 0 16 16" fill="none">
+            <path d="M8 1L2 4v4c0 3.31 2.56 6.41 6 7 3.44-.59 6-3.69 6-7V4L8 1z" stroke="#D4A017" stroke-width="1.5" stroke-linejoin="round"/>
+            <path d="M5.5 8l1.8 1.8 3.2-3.6" stroke="#D4A017" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>256-bit SSL Encryption · CBN Licensed</span>
+        </div>
+      </div>
+      <div class="login-card">
+        <div class="login-card-title">Sign In to Your Account</div>
+        <div class="field">
+          <label>Account Number or Email</label>
+          <input type="text" placeholder="0123456789 or email@address.com" id="login-id" />
+        </div>
+        <div class="field">
+          <label>Password</label>
+          <input type="password" placeholder="Enter your password" id="login-pw" />
+        </div>
+        <button class="btn-main" onclick="App.go('dash')">Sign In</button>
+        <div class="divider">or continue with</div>
+        <button class="btn-ghost" onclick="App.go('dash')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="width:18px;height:18px">
+            <rect x="3" y="11" width="18" height="11" rx="2"/>
+            <path d="M7 11V7a5 5 0 0110 0v4"/>
+          </svg>
+          Fingerprint / Face ID
+        </button>
+      </div>
+    </div>
+
+    <!-- ── DASHBOARD ── -->
+    <div id="s-dash" class="screen">
+      <div class="topbar">
+        <div class="topbar-logo">
+          <span class="topbar-logo-dot"></span>NairaVault
+        </div>
+        <div class="topbar-right">
+          <button class="topbar-icon" aria-label="Notifications">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round">
+              <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+              <path d="M13.73 21a2 2 0 01-3.46 0"/>
+            </svg>
+            <span class="notif-badge"></span>
+          </button>
+          <button class="topbar-icon" onclick="App.go('profile')" aria-label="Profile">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round">
+              <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
+              <circle cx="12" cy="7" r="4"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="acct-header">
+        <p class="acct-greeting">Good morning 👋</p>
+        <p class="acct-name">Nkechi Anna Ahanonye</p>
+
+        <!-- Debit Card -->
+        <div class="debit-card">
+          <div class="card-top-row">
+            <div>
+              <div class="card-bank-name">NairaVault</div>
+              <div class="card-bank-sub">Commercial Bank</div>
+            </div>
+            <div class="mc-logo">
+              <div class="mc-circle mc-r"></div>
+              <div class="mc-circle mc-l"></div>
+            </div>
+          </div>
+          <div class="card-chip">
+            <svg width="46" height="36" viewBox="0 0 46 36" fill="none">
+              <rect width="46" height="36" rx="5" fill="#C9A84C"/>
+              <rect x="5" y="5" width="36" height="26" rx="3" fill="none" stroke="#A8882E" stroke-width="1.2"/>
+              <line x1="15" y1="5" x2="15" y2="31" stroke="#A8882E" stroke-width="1"/>
+              <line x1="31" y1="5" x2="31" y2="31" stroke="#A8882E" stroke-width="1"/>
+              <line x1="5" y1="13" x2="41" y2="13" stroke="#A8882E" stroke-width="1"/>
+              <line x1="5" y1="23" x2="41" y2="23" stroke="#A8882E" stroke-width="1"/>
+              <rect x="15" y="13" width="16" height="10" fill="#B8902A" rx="1"/>
+            </svg>
+          </div>
+          <div class="card-balance-section">
+            <div class="card-balance-label">Available Balance</div>
+            <div class="card-balance-amount"><sup>₦</sup>2,847,500.00</div>
+          </div>
+          <div class="card-bottom-row">
+            <div class="card-number-row">•••• •••• •••• 7842</div>
+            <div>
+              <div class="card-holder-name">N. A. Ahanonye</div>
+              <div class="card-expiry">Expires 09/28 · DEBIT</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Account Number Strip -->
+      <div class="acct-strip">
+        <div class="acct-strip-left">
+          <span class="acct-strip-label">Account Number</span>
+          <span class="acct-strip-number">0123 456 789</span>
+          <span class="acct-strip-bank">NairaVault Commercial Bank · Savings</span>
+        </div>
+        <button class="copy-btn" id="copy-btn" onclick="App.copyAcct(this)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+          Copy
+        </button>
+      </div>
+
+      <!-- Stats -->
+      <div class="sec-head">
+        <div class="sec-title">This Month</div>
+      </div>
+      <div class="stat-row">
+        <div class="stat-pill">
+          <div class="stat-pill-label">Money In</div>
+          <div class="stat-pill-val credit">₦890,000</div>
+          <div class="stat-pill-sub">↑ 12% vs last month</div>
+        </div>
+        <div class="stat-pill">
+          <div class="stat-pill-label">Money Out</div>
+          <div class="stat-pill-val debit">₦412,840</div>
+          <div class="stat-pill-sub">↓ 4% vs last month</div>
+        </div>
+      </div>
+
+      <!-- Quick Transfer -->
+      <div class="sec-head">
+        <div class="sec-title">Quick Transfer</div>
+        <div class="sec-link" onclick="App.go('transfer')">All Banks</div>
+      </div>
+      <div class="quick-transfer-grid" id="quick-banks"></div>
+
+      <!-- Transactions -->
+      <div class="sec-head">
+        <div class="sec-title">Recent Transactions</div>
+        <div class="sec-link" onclick="App.go('history')">View All</div>
+      </div>
+      <div class="txn-list" id="dash-txns"></div>
+    </div>
+
+    <!-- ── TRANSFER ── -->
+    <div id="s-transfer" class="screen">
+      <div class="screen-topbar">
+        <button class="back-btn" onclick="App.go('dash')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <div class="screen-topbar-title">Send Money</div>
+      </div>
+      <div class="sec-head"><div class="sec-title">Select Bank</div></div>
+      <div class="bank-selector-grid" id="bank-selector"></div>
+      <div class="transfer-form">
+        <div class="tf-field">
+          <label class="tf-label">Account Number</label>
+          <input class="tf-input" type="number" placeholder="Enter 10-digit account number" id="tf-acct" oninput="App.checkAcct(this)" />
+        </div>
+        <div class="verified-badge" id="verified-badge" style="display:none">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#0F7B3F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px"><polyline points="20 6 9 17 4 12"/></svg>
+          <span id="verified-name">Account Verified</span>
+        </div>
+        <div class="tf-field">
+          <label class="tf-label">Amount</label>
+          <div class="amount-field-wrap">
+            <span class="amount-prefix">₦</span>
+            <input class="tf-input amount-input" type="number" placeholder="0.00" id="tf-amount" oninput="App.updateSummary()" />
+          </div>
+        </div>
+        <div class="tf-field">
+          <label class="tf-label">Narration (Optional)</label>
+          <input class="tf-input" type="text" placeholder="e.g. Rent payment, School fees..." id="tf-narr" />
+        </div>
+        <div class="transfer-summary" id="tf-summary" style="display:none">
+          <div class="ts-row"><span class="ts-label">Recipient</span><span class="ts-val" id="sum-name">—</span></div>
+          <div class="ts-row"><span class="ts-label">Bank</span><span class="ts-val" id="sum-bank">GTBank</span></div>
+          <div class="ts-row"><span class="ts-label">Amount</span><span class="ts-val" id="sum-amount">₦0.00</span></div>
+          <div class="ts-row"><span class="ts-label">Fee</span><span class="ts-val">₦10.75</span></div>
+          <div class="ts-row"><span class="ts-label bold">Total Debit</span><span class="ts-val bold" id="sum-total">₦0.00</span></div>
+        </div>
+        <button class="btn-main" onclick="App.doTransfer()">Proceed to Confirm</button>
+      </div>
+    </div>
+
+    <!-- ── HISTORY ── -->
+    <div id="s-history" class="screen">
+      <div class="screen-topbar">
+        <button class="back-btn" onclick="App.go('dash')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <div class="screen-topbar-title">Transaction History</div>
+      </div>
+      <div class="filter-tabs" id="filter-tabs">
+        <div class="filter-tab active" onclick="App.setFilter(this,'all')">All</div>
+        <div class="filter-tab" onclick="App.setFilter(this,'credit')">Credits</div>
+        <div class="filter-tab" onclick="App.setFilter(this,'debit')">Debits</div>
+        <div class="filter-tab" onclick="App.setFilter(this,'transfer')">Transfers</div>
+        <div class="filter-tab" onclick="App.setFilter(this,'bill')">Bills</div>
+      </div>
+      <div id="history-body"></div>
+    </div>
+
+    <!-- ── PROFILE ── -->
+    <div id="s-profile" class="screen">
+      <div class="topbar">
+        <div class="topbar-logo"><span class="topbar-logo-dot"></span>NairaVault</div>
+        <button class="topbar-icon" onclick="App.go('dash')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="profile-hero">
+        <div class="profile-av">N</div>
+        <div class="profile-name">Nkechi Anna Ahanonye</div>
+        <div class="profile-tier">⭐ Premium Banking</div>
+      </div>
+      <div class="kyc-banner">
+        <div class="kyc-icon">🪪</div>
+        <div class="kyc-text">
+          <div class="kyc-title">KYC Verified</div>
+          <div class="kyc-sub">BVN · NIN · Utility Bill confirmed</div>
+        </div>
+        <div class="kyc-arrow">›</div>
+      </div>
+      <div style="padding:0 20px;margin-top:16px">
+        <div class="stat-row" style="padding:0;margin:0">
+          <div class="stat-pill">
+            <div class="stat-pill-label">Account Tier</div>
+            <div class="stat-pill-val" style="color:var(--gold);font-size:18px">Tier 3</div>
+            <div class="stat-pill-sub">₦5M daily limit</div>
+          </div>
+          <div class="stat-pill">
+            <div class="stat-pill-label">BVN Status</div>
+            <div class="stat-pill-val" style="color:var(--success);font-size:18px">Linked</div>
+            <div class="stat-pill-sub">220•••••••71</div>
+          </div>
+        </div>
+      </div>
+      <div class="profile-menu" id="profile-menu"></div>
+      <div style="height:16px"></div>
+    </div>
+
+    <!-- ── BOTTOM NAV ── -->
+    <nav class="bottom-nav" id="bnav">
+      <div class="nav-item active" onclick="App.go('dash')" data-s="dash">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        <span>Home</span>
+      </div>
+      <div class="nav-item" onclick="App.go('history')" data-s="history">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        <span>History</span>
+      </div>
+      <div class="nav-item" onclick="App.go('transfer')">
+        <div class="nav-center">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        </div>
+        <span>Send</span>
+      </div>
+      <div class="nav-item" data-s="cards">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+        <span>Cards</span>
+      </div>
+      <div class="nav-item" onclick="App.go('profile')" data-s="profile">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <span>Profile</span>
+      </div>
+    </nav>
+
+    <!-- ── SUCCESS MODAL ── -->
+    <div class="modal-overlay" id="success-modal">
+      <div class="modal-sheet">
+        <div class="modal-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:38px;height:38px"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div class="modal-title">Transfer Successful</div>
+        <div class="modal-amount" id="m-amount">₦0</div>
+        <div class="modal-recipient" id="m-recipient">Sent to recipient</div>
+        <div class="modal-ref-box">
+          <span class="modal-ref-label">Transaction Reference</span>
+          <span class="modal-ref-val" id="m-ref">NV-000000</span>
+        </div>
+        <button class="btn-main" onclick="App.closeModal()">Back to Home</button>
+      </div>
+    </div>
+
+  </div><!-- /.app -->
+
+  <script src="src/js/app.js"></script>
+</body>
+</html>
